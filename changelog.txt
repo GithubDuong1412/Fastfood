@@ -1,0 +1,7 @@
+1.1 - 1/12/2023
+Updated:
+	- Import Elementor settings
+	- WooCommerce outdate template
+	- Compatible with the latest WordPress version 6.4.1
+	- Compatible with the latest version of WooCommerce plugin 8.3
+	- Slider revolution update version 6.6.18
