@@ -8,7 +8,7 @@
 get_header();
 
     if(!function_exists('s7upf_update_product')){
-        function s7upf_update_product($update = 'thumbnail',$value,$post_type = 'product',$cats = '') {  
+        function s7upf_update_product($update = 'thumbnail',$value = [],$post_type = 'product',$cats = '') {  
             if (is_array($value) && count($value) == 2) {
                 $new_value = [];
                 for ($i=$value[0]; $i <=$value[1] ; $i++) { 
@@ -200,7 +200,7 @@ get_header();
 
 Qenean commodo ligula eget dolor. Aenean massa. Cumt sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla onsequat mas quis enim. Donec pede justo, fringilla vel, aliquet nec, vulpu tate eget. Sed quia consequuntur magni dolores. Id eges tas massa sem et elit. Viva mus semper cursus libero';
     $excerpt = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt condimentum felis, et tempor neque rhoncus ac. Proin elementum, felis id placerat dapibus, purus ipsum lobortis tellus, ut vehicula nisl metus eget arcu.';
-    $tags = array("Car repair","Automotive parts","Engine","Oil","Tires","Vehicles","Wheels","Car camera","Car connectors","Car furniture");
+    $tags = array("Burger","Takeaway","Combo Meal","Pizza","Quick Service","Salads","Taco","Sandwich","Breakfast Menu","Specials", "Nuggets");
     // $ids_cat = array(5038,5050);
     // s7upf_update_product('thumbnail',$ids_cat,'product','skiwear');
     // s7upf_update_product('gallery',$ids_cat,'product','skiwear');
@@ -248,10 +248,10 @@ Qenean commodo ligula eget dolor. Aenean massa. Cumt sociis natoque penatibus et
 
 
     //Update thumb
-    $ids = array(6069,6098);
-    // s7upf_update_product('thumbnail',$ids);
-    // s7upf_update_product('gallery',$ids);
-    // s7upf_update_product('thumb_hover',$ids);
+    $ids = array(10838,10867);
+    s7upf_update_product('thumbnail',$ids);
+    s7upf_update_product('gallery',$ids);
+    s7upf_update_product('thumb_hover',$ids);
 
     // s7upf_update_product('excerpt',$excerpt);
     // s7upf_update_product('content',$content);

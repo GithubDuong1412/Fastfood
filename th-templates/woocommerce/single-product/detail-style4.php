@@ -6,9 +6,9 @@ $thumb_class = 'col-md-12 col-sm-12 col-xs-12';
 $info_class = 'col-md-12 col-sm-12 col-xs-12';
 $zoom_style = '';
 global $product;
-$thumb_id = array(get_post_thumbnail_id());
-// $attachment_ids = $product->get_gallery_image_ids();
-// $attachment_ids = array_merge($thumb_id,$attachment_ids);
+$thumb_id = get_post_thumbnail_id();
+$attachment_ids = $product->get_gallery_image_ids();
+$attachment_ids = array_merge(array(get_post_thumbnail_id()),$attachment_ids);
 $product_slider = get_post_meta(get_the_ID(), 'product_slider', true);
 if($product_slider){
     $attachment_ids = explode(',', $product_slider);
@@ -27,7 +27,7 @@ foreach ( $attachment_ids as $attachment_id ) {
         <div class="<?php echo esc_attr($thumb_class)?>">
             <div class="detail-gallery">
                 <div class="wrap-detail-gallery images <?php echo esc_attr($zoom_style)?>">
-                    <div class="mid woocommerce-product-gallery__image image-lightbox" data-number="0" data-gallery="<?php echo esc_attr($gallerys)?>">
+                    <div class="mid woocommerce-product-gallery__image image-lightbox" data-number="0" data-gallery="<?php //echo esc_attr($gallerys)?>">
                         <?php 
                         $srcfull  = wp_get_attachment_image_url( $thumb_id, 'full' );
                         $html = wp_get_attachment_image($thumb_id,'full',array('class'=> 'wp-post-image','data-src' => $srcfull));

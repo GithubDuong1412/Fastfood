@@ -605,6 +605,7 @@ class Th_Testimonial_Slider extends Widget_Base {
 					'slider-nav-style2'  => esc_html__( 'Style 2', 'autopart' ),
 					'slider-nav-style3'  => esc_html__( 'Style 3', 'autopart' ),
 					'slider-nav-style4'	 => esc_html__( 'Style 4', 'autopart' ),
+					'slider-nav-style5'	 => esc_html__( 'Style 5', 'autopart' ),
 				],
 			]
 		);
@@ -877,6 +878,7 @@ class Th_Testimonial_Slider extends Widget_Base {
 					'slider-pag-style2'  => esc_html__( 'Style 2', 'autopart' ),
 					'slider-pag-style3'  => esc_html__( 'Style 3', 'autopart' ),
 					'slider-pag-style4'  => esc_html__( 'Style 4', 'autopart' ),
+					'slider-nav-style5'	 => esc_html__( 'Style 5', 'autopart' ),
 				],
 			]
 		);
@@ -1094,6 +1096,7 @@ class Th_Testimonial_Slider extends Widget_Base {
 					'style2'		=> esc_html__( 'Style 2', 'autopart' ),
 					'style3'		=> esc_html__( 'Style 3', 'autopart' ),
 					'style4'		=> esc_html__( 'Style 4', 'autopart' ),
+					'style5'		=> esc_html__( 'Style 5', 'autopart' ),
 				],
 			]
 		);		

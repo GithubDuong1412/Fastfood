@@ -5,7 +5,8 @@
  * Date: 12/08/15
  * Time: 10:20 AM
  */
-
+add_filter( 'use_block_editor_for_post', '__return_false' );
+add_filter( 'use_widgets_block_editor', '__return_false' );
 if(!function_exists('th_change_required')){
     function th_change_required($condition){
         if(is_string($condition)){            
@@ -134,9 +135,10 @@ if(!function_exists('th_fix_type_redux')){
 
 if(class_exists('Redux')){
     $th_option_name = th_get_option_name();
-    add_filter("redux/metaboxes/".$th_option_name."/boxes", "th_custom_meta_boxes",$th_option_name);
+    $uri = '';
+    if(isset($_GET['action'])) $uri = $_GET['action'];
+    if( $uri !== 'elementor' ) add_filter("redux/metaboxes/".$th_option_name."/boxes", "th_custom_meta_boxes",$th_option_name);
 }
-else add_action('admin_init', 'th_custom_meta_boxes');
 if(!function_exists('th_register_metabox')){
     function th_register_metabox($settings){
         foreach ($settings as $key => $setting) {
@@ -427,7 +429,7 @@ if(!function_exists('th_custom_meta_boxes')){
                 array(
                     'id'        => 'product_slider',
                     'label'     => esc_html__('Add Slider Gallery', 'autopart'),
-                    'type'      => 'Gallery',
+                    'type'      => 'gallery',
                     'desc'      => esc_html__('Choose images from media.','autopart'),
                     'condition' => 'product_single_style:is(style4)',
                 ),

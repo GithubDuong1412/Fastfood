@@ -26,7 +26,8 @@ if($show_related == '1' && $related):?>
             $item_wrap = 'class="list-col-item list-1-item"';
             $item_inner = 'class="item-product-wrap product swiper-slide"';
             $button_icon_pos = $button_icon = $button_text = $column = '';
-            $item_thumbnail = $item_quickview = $item_label = $item_title = $item_rate = $item_price = $item_button = 'yes';
+            // $item_thumbnail = $item_quickview = $item_label = $item_title = $item_rate = $item_price = $item_button = 'yes';
+            $item_thumbnail = $item_quickview = $item_label = $item_title = $item_price = $item_button = 'yes';
             $thumbnail_hover_animation = 'zoom-thumb';
             $view = 'slider';
             $attr = array(

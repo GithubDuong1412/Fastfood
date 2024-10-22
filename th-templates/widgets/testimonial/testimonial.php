@@ -14,6 +14,11 @@ extract($settings);
                         <div class="content-wrap">                            
                             <p class="item-content">'.$item['content'].'</p>
                         </div>
+                        <div class="inner-info">
+                            <h3 class="item-title"><a href="'.$item['link']['url'].'"'.$target.$nofollow.'>'.$item['title'].'</a></h3>
+                            <span class="split item-des">/</span>
+                            <p class="item-des">'.$item['description'].'</p>
+                        </div>
                         <div class="image-wrap">';
             if($item['image']['id']){
                 echo            '<a class="adv-thumb-link elementor-animation-'.$image_hover_animation.'" href="'.$item['link']['url'].'"'.$target.$nofollow.'>';
@@ -21,11 +26,6 @@ extract($settings);
                 echo            '</a>';
             }
             echo        '</div>
-                        <div class="inner-info">
-                            <h3 class="item-title"><a href="'.$item['link']['url'].'"'.$target.$nofollow.'>'.$item['title'].'</a></h3>
-                            <span class="split item-des">/</span>
-                            <p class="item-des">'.$item['description'].'</p>
-                        </div>
                     </div>';
             $wdata->remove_render_attribute( 'elth-item', 'class', 'wslider-item item-testimonial '.$style.' elementor-repeater-item-'.$item['_id'] );
         }

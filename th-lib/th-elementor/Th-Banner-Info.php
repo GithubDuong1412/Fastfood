@@ -427,7 +427,8 @@ class Th_Banner_Info extends Widget_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .elth-btwrap a' => 'margin: 0 {{SIZE}}{{UNIT}};',
-					'{{WRAPPER}} .elth-btwrap' => 'margin: 0 -{{SIZE}}{{UNIT}};',
+					// '{{WRAPPER}} .elth-btwrap' => 'margin: 0 -{{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .elth-btwrap' => 'margin-left: {{SIZE}}{{UNIT}};',
 				]
 			]
 		);

@@ -1957,7 +1957,7 @@ class Th_Shop extends Widget_Base {
         if(!empty($css_class)) $el_class .= ' '.$css_class;
         // $filter_show = '';
         $el_class = 'product-'.$view.'-view '.$grid_type.' filter-'.$filter_show;
-
+		$column_tablet = $column_mobile = '';
 		if(isset($column['size'])) $column = $column['size'];
 		if(isset($column_tablet['size'])) $column_tablet = $column_tablet['size'];
 		if(isset($column_mobile['size'])) $column_mobile = $column_mobile['size'];
